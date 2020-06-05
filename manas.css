@@ -1,31 +1,35 @@
-<<<<<<< HEAD
-
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .header{
     background: url(back3.jpg);
-    height: 97vh;
+    height: 100vh;
     width: 100%;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
 }
 .navbar{
     text-align: center;
-    padding-top: 30px;
-    padding-left: 100px;
-    border: 40px;
+    padding: 20px;
+    /* border: 40px; */
 }
 .navbar a{
     text-decoration: none;
     color: rgb(243, 137, 137);
     /* font-style: 'Chelsea Market', cursive; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px ;
+    font-size: 25px ;
     margin-right: 120px;
-    /* border: 2px solid white; */
+    border: 2px solid transparent;
     border-radius: 8px;
+    transition: 0.5s;
+    padding: 10px;
 }
 .navbar a:hover 
 {
@@ -40,25 +44,23 @@
 }
 .headcontent{
     text-align: center;
-    position: absolute;
-    top: 200px;
-    left: 33%;
+    
     /* display: inline; */
     /* margin: auto; */
 }
 .headcontent img
 {
-    
+    border: 2px solid #fff;
     border-radius: 50%;
-    height: 100%;
-    /* width: 101%; */
-    border: 4px solid #fff;
-    /* margin-top: 80px; */
+    /* height: 200px */
+    /* width: 200px; */
+    margin-top: 30px;
+
 
 }
 .headcontent img:hover
 {
-    border: 4px solid #fff ;
+    border: 2px solid #000 ;
 
 }
 .name{
@@ -68,7 +70,7 @@
     color: #32fb2a;
 }
 .descrip{
-    cursor: pointer;
+    cursor: default;
     font-size: 30px;
     color: #eea0eefa;
     font-family: cursive;
@@ -83,9 +85,11 @@
 } */
 .aboutpage{
     text-align: center;
+    background-color: aquamarine;
+    width: 100%;
 }
 .aboutpage h2{
-    text-align: center;
+    /* text-align: center; */
     font-family: 'Chelsea Market', cursive;
     font-size: 70px;
     text-decoration: underline;
@@ -113,13 +117,30 @@
 
 #cs{
     text-align: center;
-    
+    border: 2px solid #16b810;
+    width: 400px;
+    margin: auto;
+    padding-bottom: 12px;
+    background-color: #fff;
+    border-radius: 10%;
 }
 #music{
     text-align: center;
+    border: 2px solid #16b810;
+    width: 400px;
+    margin: auto;
+    padding-bottom: 12px;
+    background-color: #fff;
+    border-radius: 10%;
 }
 #lrn{
     text-align: center;
+    border: 2px solid #16b810;
+    width: 400px;
+    margin: auto;
+    padding-bottom: 12px;
+    background-color: #fff;
+    border-radius: 10%;
 }
 #cs h3{
     color: rgb(200, 30, 30);
@@ -134,9 +155,10 @@
 
 .skillpage{
 width: 100%;
-height: 700px;
+/* height: 700px; */
 /* background: #9ea0a3; */
 text-align: center;
+background-color: antiquewhite;
 }
 .skillpage h2{
     /* text-align: center; */
@@ -151,11 +173,12 @@ text-align: center;
 height: 200px;
 width: 200px;
 /* display: inline-block; */
-/* background-color: azure; */
+background-color: #fff;
 margin: 40px;
 border: 3px solid #16b810;
 border-radius: 10px;
-/* transition: step-end; */
+cursor: pointer;
+transition: .3s;
 /* padding-left: 160px; */
 }
 /* .skillpage img :hover
@@ -169,7 +192,7 @@ transition: ease-in;
 
 .projectpage{
     width: 100%;
-    height: 730px;
+    /* height: 730px; */
     background: #dee0e1;
     text-align: center;
     }
@@ -180,6 +203,10 @@ transition: ease-in;
         text-decoration: underline;
         color: rgb(206, 6, 6);
     }
+.projectpage img{
+    width: 40%;
+    
+}
 .projectpage a
 {
     font-size: 40px;
@@ -217,252 +244,15 @@ transition: ease-in;
 }
 
 .sociallink{
-    text-align: center;
+    display: flex;
     width: 100%;
     height: 600px;
     background: #dee0e1;
     
     
 }
-.sociallink p{
-font-size: 20px;
-font-family: cursive;
-}
+
 .sociallink a{
     margin-left: 40px;
     margin-right: 40px;
-=======
-
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
-
-.header{
-    background: url(back3.jpg);
-    height: 97vh;
-    width: 100%;
-    background-repeat: repeat-y;
-    background-position: center;
-    background-size: cover;
-
-}
-.navbar{
-    text-align: center;
-    padding-top: 30px;
-    padding-left: 100px;
-    border: 40px;
-}
-.navbar a{
-    text-decoration: none;
-    color: rgb(243, 137, 137);
-    /* font-style: 'Chelsea Market', cursive; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px ;
-    margin-right: 120px;
-    /* border: 2px solid white; */
-    border-radius: 8px;
-}
-.navbar a:hover 
-{
-    /* background-color: yellow; */
-    background: rgba(215, 138, 138, 0.62);
-    border: 2px solid #e61336;
-}
-.links{
-    position: absolute ;
-    top: 100px;
-    right: 6%;
-}
-.headcontent{
-    text-align: center;
-    position: absolute;
-    top: 200px;
-    left: 33%;
-    /* display: inline; */
-    /* margin: auto; */
-}
-.headcontent img
-{
-    
-    border-radius: 50%;
-    height: 100%;
-    /* width: 101%; */
-    border: 4px solid #fff;
-    /* margin-top: 80px; */
-
-}
-.headcontent img:hover
-{
-    border: 4px solid #fff ;
-
-}
-.name{
-    cursor: pointer;
-    font-size: 50px;
-    font-family: cursive;
-    color: #32fb2a;
-}
-.descrip{
-    cursor: pointer;
-    font-size: 30px;
-    color: #eea0eefa;
-    font-family: cursive;
-    padding-bottom: 80px;
-}
-
-/* ABOUT PAGE STARTS HERE */
-
-
-/* .aboutpage{
-    background-color: rgb(0, 10,150);
-} */
-.aboutpage{
-    text-align: center;
-}
-.aboutpage h2{
-    text-align: center;
-    font-family: 'Chelsea Market', cursive;
-    font-size: 70px;
-    text-decoration: underline;
-    color: rgb(32, 27, 108);
-}
-.aboutpage h3{
-    /* text-align: center; */
-    font-family: cursive;
-    font-size: 30px;
-    /* display: inline; */
-    
-}
-.aboutpage p{
-    /* text-align: center; */
-    font-family: sc;
-    font-size: 15px;
-    display: block;
-    margin: auto;
-    border-color: #000;
-    text-shadow: #000;
-    width: 33%;
-    /* display: inline; */
-}
-
-
-#cs{
-    text-align: center;
-    
-}
-#music{
-    text-align: center;
-}
-#lrn{
-    text-align: center;
-}
-#cs h3{
-    color: rgb(200, 30, 30);
-}
-#music h3{
-    color: rgb(38, 124, 175);
-}
-#lrn h3{
-    color: rgb(26, 154, 18);
-}
-/* SKILL PAGE STARTS HERE */
-
-.skillpage{
-width: 100%;
-height: 700px;
-/* background: #9ea0a3; */
-text-align: center;
-}
-.skillpage h2{
-    /* text-align: center; */
-    font-family: 'Chelsea Market', cursive;
-    font-size: 70px;
-    text-decoration: underline;
-    color: rgb(132, 31, 158);
-}
-.skillpage img{
-/* text-align: center; */
-/* display: block; */
-height: 200px;
-width: 200px;
-/* display: inline-block; */
-/* background-color: azure; */
-margin: 40px;
-border: 3px solid #16b810;
-border-radius: 10px;
-/* transition: step-end; */
-/* padding-left: 160px; */
-}
-/* .skillpage img :hover
-{
-border: 3px solid #f708f7;
-border-radius: 10px;
-transition: ease-in;
-} */
-
-/* PROJECT PAGE STARTS HERE */
-
-.projectpage{
-    width: 100%;
-    height: 730px;
-    background: #dee0e1;
-    text-align: center;
-    }
-.projectpage h2{
-        /* text-align: center; */
-        font-family: 'Chelsea Market', cursive;
-        font-size: 70px;
-        text-decoration: underline;
-        color: rgb(206, 6, 6);
-    }
-.projectpage a
-{
-    font-size: 40px;
-    display: block;
-    margin: 30px;
-    border: 4px solid rgb(32, 27, 108);
-    border-radius: 10px;
-    text-decoration: none;
-}
-.projectpage a{
-    text-decoration: none;
-    color: rgb(250, 0, 0);
-    /* font-style: 'Chelsea Market', cursive; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px ;
-    /* margin-right: 120px; */
-    border: 2px solid transparent;
-    border-radius: 10px;
-}
-.projectpage a:hover 
-{
-    /* background-color: yellow; */
-    text-decoration: underline;
-    background: rgb(31, 30, 30);
-    border: 2px solid #ffffff;
-}
-#p1{
-    color: rgb(11, 156, 16);
-}
-#p2{
-    color: rgb(112, 51, 165);
-}
-#p3{
-    color: rgb(207, 47, 47);
-}
-
-.sociallink{
-    text-align: center;
-    width: 100%;
-    height: 600px;
-    background: #dee0e1;
-    
-    
-}
-.sociallink p{
-font-size: 20px;
-font-family: cursive;
-}
-.sociallink a{
-    margin-left: 40px;
-    margin-right: 40px;
->>>>>>> d9126b9f02b50404ef5185d70e2a28836299c2eb
 }
