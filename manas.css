@@ -1,19 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 
-body{
+.loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+.loader{
+    border: 0 solid transparent;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    /* display: inline-block;
+    text-align: center; */
+}
+.loader :before, .loader:after{
+    content: '';
+    border: 1em solid #ff5733;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+.loader:before{
+    animation-delay: .5s;
+
+}
+@keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+
+}
+
+.container{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 .header{
     background: url(back3.jpg);
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
 }
+
+
+
 .navbar{
     text-align: center;
     padding: 20px;
@@ -25,7 +78,8 @@ body{
     /* font-style: 'Chelsea Market', cursive; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 25px ;
-    margin-right: 120px;
+    margin-right: 60px;
+    margin-left: 60px ;
     border: 2px solid transparent;
     border-radius: 8px;
     transition: 0.5s;
@@ -39,8 +93,12 @@ body{
 }
 .links{
     position: absolute ;
-    top: 100px;
+    top: 60px;
     right: 6%;
+}
+.links a {
+    height: 50px;
+    width: auto;
 }
 .headcontent{
     text-align: center;
@@ -54,7 +112,7 @@ body{
     border-radius: 50%;
     /* height: 200px */
     /* width: 200px; */
-    margin-top: 30px;
+    margin-top: 70px;
 
 
 }
@@ -87,7 +145,9 @@ body{
     text-align: center;
     background-color: aquamarine;
     width: 100%;
+    
 }
+
 .aboutpage h2{
     /* text-align: center; */
     font-family: 'Chelsea Market', cursive;
@@ -102,6 +162,7 @@ body{
     /* display: inline; */
     
 }
+
 .aboutpage p{
     /* text-align: center; */
     font-family: sc;
@@ -110,12 +171,28 @@ body{
     margin: auto;
     border-color: #000;
     text-shadow: #000;
-    width: 33%;
+    width: 60%;
     /* display: inline; */
 }
 
 
-#cs{
+.cs{
+    text-align: center;
+    border: 2px solid #16b810;
+    width: 380px;
+    margin: auto;
+    padding-bottom: 12px;
+    background-color: #fff;
+    border-radius: 10%;
+    /* opacity: 0;
+    transform: translateY(10px);
+    transition: 0.5s all ease-in-out; */
+}
+/* .cs-appear{
+    opacity: 1;
+    transform: translateY(0px);
+} */
+.music{
     text-align: center;
     border: 2px solid #16b810;
     width: 400px;
@@ -124,31 +201,22 @@ body{
     background-color: #fff;
     border-radius: 10%;
 }
-#music{
+.lrn{
     text-align: center;
     border: 2px solid #16b810;
-    width: 400px;
+    width: 360px;
     margin: auto;
     padding-bottom: 12px;
     background-color: #fff;
     border-radius: 10%;
 }
-#lrn{
-    text-align: center;
-    border: 2px solid #16b810;
-    width: 400px;
-    margin: auto;
-    padding-bottom: 12px;
-    background-color: #fff;
-    border-radius: 10%;
-}
-#cs h3{
+.cs h3{
     color: rgb(200, 30, 30);
 }
-#music h3{
+.music h3{
     color: rgb(38, 124, 175);
 }
-#lrn h3{
+.lrn h3{
     color: rgb(26, 154, 18);
 }
 /* SKILL PAGE STARTS HERE */
@@ -243,16 +311,139 @@ transition: ease-in;
     color: rgb(207, 47, 47);
 }
 
-.sociallink{
-    display: flex;
+.sociallinks{
+    text-align: center;
     width: 100%;
-    height: 600px;
-    background: #dee0e1;
+    
+    background: gray;
     
     
 }
 
-.sociallink a{
-    margin-left: 40px;
-    margin-right: 40px;
+.sociallinks a{
+    margin: 40px;
+    padding-top: 20px;
 }
+
+.toggle {
+    width: 30px;
+    padding: 10px;
+    float: right;
+    background:#ffffffa1;
+    border-radius: 10px;
+    margin: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle span
+{
+    width: 100%;
+    height: 4px;
+    background-color: rgb(75, 69, 69);
+    display: block;
+    margin-bottom: 3px;
+
+}
+
+@media (max-width: 768px)
+{
+    .loader{
+        position: absolute;
+        top: 180px;
+        left:150px
+    }
+    .toggle{
+        display: block;
+        position: fixed;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+    .links{
+        display: none;
+    }
+    .links a{
+        
+        height: 20px;
+        width: 20px;
+        
+    }
+    .aboutpage p{
+        width: 98%;
+        padding: 0%;
+    }
+    .container h2{
+        font-size: 50px;
+    }
+    .skillpage img{
+        margin: 20px;
+        height: 120px;
+        width: 120px;
+    }
+    .sociallinks a{
+        height: 20px;
+        width: 20px;
+        margin: 10px;
+    }
+    .cs{
+        width: 300px;
+    }
+    .music{
+        width: 300px;
+    }
+    .lrn{
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px)
+{
+    .loader{
+        position: relative;
+        top: 150px;
+        left: 50px;
+    }
+    
+    .headcontent img{
+        width: 80%;
+        height: 100%;
+    }
+    .links{
+        position: absolute;
+        top: 11px;
+        /* height: 50%;
+        width: 50%; */
+    }
+    .name{
+        font-size: 40px;
+    }
+    .cs{
+        width: 90%;
+    }
+    .music{
+        width: 90%;
+    }
+    .lrn{
+        width: 90%;
+    }
+    .skillpage img{
+        height: 90px;
+        width: 90px;
+        margin: 10px;
+    }
+    .container h2{
+        font-size: 50px;
+    }
+    .sociallinks a{
+        height: 20px;
+        width: 20px;
+        margin: 10px;
+    }
+}
+

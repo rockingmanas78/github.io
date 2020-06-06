@@ -6,10 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="manas.css">
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/query/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
     
     <title>S. Manas</title>
 </head>
+
+<div class="loader_bg">
+    <div class="loader">
+
+    </div>
+</div>
+
 <body>
+    <div class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <div class="container">
         <div class="header">
             <div class="navbar">
@@ -20,16 +35,16 @@
             <div class="links">
                 <ul>
                     
-                    <li><a href="https://www.instagram.com/rockingmanas78/"><img src="/Instagram-Icon.png" height="50px" width="50px"></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=100006741168797"><img src="/Facebook-Icon-PNG.png" height="50px" width="50px"></a></li>
-                    <li><a href="http://www.youtube.com/channel/UCPX7WAw00W3l28vLX-UsOdA"><img src="/youtube-icon.png" height="50px" width="50px"></a></li>
-                    <li><a href="https://www.linkedin.com/in/manas-srivastava-122b94189/"><img src="/linkedin-icon.png" height="50px" width="50px"></a></li>
-                    <li><a href="https://github.com/rockingmanas78"><img src="/github16logo.png" height="50px" width="50px"></a></li>
+                    <li><a href="https://www.instagram.com/rockingmanas78/"><img src="/Instagram-Icon.png" height="50px" width="50px"></a>
+                    <li><a href="https://www.facebook.com/profile.php?id=100006741168797"><img src="/Facebook-Icon-PNG.png" height="50px" width="50px"></a>
+                    <li><a href="http://www.youtube.com/channel/UCPX7WAw00W3l28vLX-UsOdA"><img src="/youtube-icon.png" height="50px" width="50px"></a>
+                    <li><a href="https://www.linkedin.com/in/manas-srivastava-122b94189/"><img src="/linkedin-icon.png" height="50px" width="50px"></a>
+                    <li><a href="https://github.com/rockingmanas78"><img src="/github16logo.png" height="50px" width="50px"></a>
                 </ul>
             </div>
         
             <div class="headcontent">
-                <img src="/IMG20191117111516.jpg" height="300px"    width="300px">
+                <img src="/IMG_20200606_030806 (1).jpg" height="300px"    width="300px">
                 <P class="name">S. Manas</P>
                 <p class="descrip">Web Developer and Vocalist</p>
             </div>
@@ -41,19 +56,19 @@
             
             
 
-                <div id="cs">
+                <div class="cs cs-appear">
                     <h3>COMPUTER SCIENCE</h3>
                     <img src="/cslogo.jpg" height="50px" width="50px">
                     <p>A student of Computer Science Engineering. Still figuring out my interests in this domain and trying to learn new stuffs everyday.</p>
-               </div>
-    <br>
-                <div id="music">
+                </div>
+                <br>
+                <div class="music">
                     <h3>MUSIC</h3>
                     <img src="/miclogo.jpg" height="100px" width="100px">
                     <p>Music fascinates me the most. It's my passion as well as timepass. My areas of interest here is classical, semi-classical and pop songs and I'm also working on Composing and Vocal Production.</p>
                 </div>
-    <br>
-                <div id="lrn">
+                <br>
+                <div class="lrn">
                     <h3>LEARNER</h3>
                     <img src="/brlogo.jpg" height="80px" width="80px">
                     <p>Everyday I try to learn something new and I always want to became a person better than that I was a day before.</p>
@@ -61,7 +76,6 @@
             
             <br><br>
         </div>
-        <br>
 
         <div class="skillpage" id="skill">
             <h2>SKILLS</h2>
@@ -81,7 +95,7 @@
         </div>
 
         <div class="projectpage" id="projects">
-            <h2>PROJECT</h2>
+            <h2>PROJECTS</h2>
             <br><br>
             <img src="/Screenshot (7).png">
             <a href="#" id="p1">To-Do-List</a>
@@ -99,7 +113,7 @@
         </div>
 
         <div class="sociallinks">
-            <!-- <p>Quick Links</p> -->
+            <p>Quick Links</p>
             <a href="http://www.youtube.com/channel/UCPX7WAw00W3l28vLX-UsOdA"><img src="/youtube-icon.png" height="50px" width="50px"></a>
             <a href="https://www.instagram.com/rockingmanas78/"><img src="/Instagram-Icon.png" height="50px" width="50px"></a>
             <a href="https://www.facebook.com/profile.php?id=100006741168797"><img src="/Facebook-Icon-PNG.png" height="50px" width="50px"></a>
@@ -109,3 +123,38 @@
         
     </div>
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $(".toggle").click(function(){
+          $(".navbar").slideToggle();
+          $(".links").slideToggle();
+       });
+       $(window).resize(function(){
+          if($(window).width()>768)
+          {
+              $('.navbar').show();
+              $('.links').show();
+          }
+          else
+          {
+              $('.navbar').hide();
+              $('.links').hide();
+          }
+       });
+    });
+    setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+    }, 1500);
+    // function scrollAppear(){
+    //     var cS = document.querySelector('.cs');
+    //     var cSPosition = cS.getBoundingClientRect().top;
+    //     var screenPosition = window.innerHeight/2;
+
+    //     if(cSPosition<screenPosition)
+    //     {
+    //         cS.classList.add('.cs-appear');
+    //     }
+    // }
+
+    // window.addEventListener('scroll',scrollAppear);
+</script>
