@@ -407,7 +407,7 @@ transition: ease-in;
     .loader{
         position: relative;
         top: 150px;
-        left: 50px;
+        left: 20px;
     }
     
     .headcontent img{
